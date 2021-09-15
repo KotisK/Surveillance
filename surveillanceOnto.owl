@@ -22,6 +22,10 @@
         <Literal xml:lang="en">18-09-2021</Literal>
     </Annotation>
     <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
+        <Literal xml:lang="en">CC0 1.0 Universal</Literal>
+    </Annotation>
+    <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <Literal xml:lang="en">Experimental ontology to support research in biased semantics in surveillance domain: Bias in knowledge capture, a barrier in fair offender capture.</Literal>
     </Annotation>
@@ -130,7 +134,13 @@
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
     </Declaration>
     <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/license"/>
+    </Declaration>
+    <Declaration>
         <AnnotationProperty IRI="http://purl.org/dc/terms/date"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
     </Declaration>
     <SubClassOf>
         <Class IRI="#Backpack"/>
@@ -276,6 +286,10 @@
         <ObjectProperty IRI="#wears"/>
         <Class IRI="#Hood"/>
     </ObjectPropertyRange>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/license"/>
+    </SubAnnotationPropertyOf>
 </Ontology>
 
 
