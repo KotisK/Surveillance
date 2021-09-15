@@ -183,16 +183,35 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
+        <Class IRI="#Robber"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Offender"/>
+            <ObjectIntersectionOf>
+                <ObjectHasValue>
+                    <ObjectProperty IRI="http://dbpedia.org/ontology/nationality"/>
+                    <NamedIndividual IRI="#Africa"/>
+                </ObjectHasValue>
+                <ObjectHasValue>
+                    <ObjectProperty IRI="#hasSkin"/>
+                    <NamedIndividual IRI="#black_skin"/>
+                </ObjectHasValue>
+            </ObjectIntersectionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class IRI="#Terrorist"/>
         <ObjectIntersectionOf>
-            <ObjectHasValue>
-                <ObjectProperty IRI="http://dbpedia.org/ontology/nationality"/>
-                <NamedIndividual IRI="#Greece"/>
-            </ObjectHasValue>
-            <ObjectHasValue>
-                <ObjectProperty IRI="#hasSkin"/>
-                <NamedIndividual IRI="#white_skin"/>
-            </ObjectHasValue>
+            <Class IRI="#Offender"/>
+            <ObjectIntersectionOf>
+                <ObjectHasValue>
+                    <ObjectProperty IRI="http://dbpedia.org/ontology/nationality"/>
+                    <NamedIndividual IRI="#Greece"/>
+                </ObjectHasValue>
+                <ObjectHasValue>
+                    <ObjectProperty IRI="#hasSkin"/>
+                    <NamedIndividual IRI="#white_skin"/>
+                </ObjectHasValue>
+            </ObjectIntersectionOf>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <SubClassOf>
@@ -336,6 +355,16 @@
         <ObjectProperty IRI="#wears"/>
         <NamedIndividual IRI="#Mrs_L"/>
         <NamedIndividual IRI="#full-face-hood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://dbpedia.org/ontology/nationality"/>
+        <NamedIndividual IRI="#Some_M"/>
+        <NamedIndividual IRI="#Africa"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSkin"/>
+        <NamedIndividual IRI="#Some_M"/>
+        <NamedIndividual IRI="#black_skin"/>
     </ObjectPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="http://dbpedia.org/ontology/nationality"/>
