@@ -7,7 +7,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://i-lab.aegean.gr/ontologies/surveillance"
      versionIRI="http://i-lab.aegean.gr/ontologies/surveillance/0.2">
-    <Prefix name="" IRI="http://i-lab.aegean.gr/ontologies/surveillance#"/>
+    <Prefix name="" IRI="http://i-lab.aegean.gr/ontologies/surveillance"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
@@ -92,6 +92,12 @@
         <DataProperty IRI="http://dbpedia.org/ontology/sex"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#K"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#L"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#black_skin"/>
     </Declaration>
     <Declaration>
@@ -142,6 +148,27 @@
     <Declaration>
         <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
     </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Offender"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#carries"/>
+                <Class IRI="#Carried_accessory"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#wears"/>
+                <Class IRI="#Hood"/>
+            </ObjectSomeValuesFrom>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasBody"/>
+                <Class IRI="#Body"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasSkin"/>
+                <Class IRI="#Skin"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
     <SubClassOf>
         <Class IRI="#Backpack"/>
         <Class IRI="#Carried_accessory"/>
@@ -155,34 +182,6 @@
         <Class IRI="http://dbpedia.org/ontology/Person"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Offender"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#carries"/>
-            <Class IRI="#Carried_accessory"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Offender"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#wears"/>
-            <Class IRI="#Hood"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Offender"/>
-        <ObjectExactCardinality cardinality="1">
-            <ObjectProperty IRI="#hasBody"/>
-            <Class IRI="#Body"/>
-        </ObjectExactCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Offender"/>
-        <ObjectExactCardinality cardinality="1">
-            <ObjectProperty IRI="#hasSkin"/>
-            <Class IRI="#Skin"/>
-        </ObjectExactCardinality>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Robber"/>
         <Class IRI="#Offender"/>
     </SubClassOf>
@@ -190,6 +189,14 @@
         <Class IRI="#Terrorist"/>
         <Class IRI="#Offender"/>
     </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="http://dbpedia.org/ontology/Person"/>
+        <NamedIndividual IRI="#K"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://dbpedia.org/ontology/Person"/>
+        <NamedIndividual IRI="#L"/>
+    </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Skin"/>
         <NamedIndividual IRI="#black_skin"/>
@@ -242,6 +249,31 @@
         <Class IRI="#Skin"/>
         <NamedIndividual IRI="#white_skin"/>
     </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#carries"/>
+        <NamedIndividual IRI="#K"/>
+        <NamedIndividual IRI="#knife"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#carries"/>
+        <NamedIndividual IRI="#K"/>
+        <NamedIndividual IRI="#large-backpack"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSkin"/>
+        <NamedIndividual IRI="#K"/>
+        <NamedIndividual IRI="#black_skin"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#wears"/>
+        <NamedIndividual IRI="#K"/>
+        <NamedIndividual IRI="#full-face-hood"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://dbpedia.org/ontology/sex"/>
+        <NamedIndividual IRI="#K"/>
+        <Literal>male</Literal>
+    </DataPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="http://dbpedia.org/ontology/nationality"/>
         <ObjectProperty IRI="http://dbpedia.org/ontology/hasLocation"/>
