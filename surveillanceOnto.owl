@@ -1,0 +1,284 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://i-lab.aegean.gr/ontologies/surveillance"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://i-lab.aegean.gr/ontologies/surveillance"
+     versionIRI="http://i-lab.aegean.gr/ontologies/surveillance/0.2">
+    <Prefix name="" IRI="http://i-lab.aegean.gr/ontologies/surveillance#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <Literal xml:lang="en">E. Paparidis, K. Kotis</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/date"/>
+        <Literal xml:lang="en">18-09-2021</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en">Experimental ontology to support research in biased semantics in surveillance domain: Bias in knowledge capture, a barrier in fair offender capture.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal xml:lang="en">Surveillance ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal xml:lang="en">0.2</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="http://dbpedia.org/ontology/Country"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://dbpedia.org/ontology/Person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Backpack"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Body"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Carried_accessory"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Gun"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hood"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Offender"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Robber"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Skin"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Terrorist"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://dbpedia.org/ontology/hasLocation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://dbpedia.org/ontology/nationality"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#carries"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasBody"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSkin"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#wears"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://dbpedia.org/ontology/sex"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#black_skin"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#full-face-hood"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#half-face-hood"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#knife"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#large-backpack"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#long-height-body"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#medium-height-body"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#normal-hood"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#pistol"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#short-height-body"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#shotgun"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#small-backpack"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#white_skin"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/date"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Backpack"/>
+        <Class IRI="#Carried_accessory"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Gun"/>
+        <Class IRI="#Carried_accessory"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Offender"/>
+        <Class IRI="http://dbpedia.org/ontology/Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Offender"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#carries"/>
+            <Class IRI="#Carried_accessory"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Offender"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#wears"/>
+            <Class IRI="#Hood"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Offender"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasBody"/>
+            <Class IRI="#Body"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Offender"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasSkin"/>
+            <Class IRI="#Skin"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Robber"/>
+        <Class IRI="#Offender"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Terrorist"/>
+        <Class IRI="#Offender"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Skin"/>
+        <NamedIndividual IRI="#black_skin"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hood"/>
+        <NamedIndividual IRI="#full-face-hood"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hood"/>
+        <NamedIndividual IRI="#half-face-hood"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Gun"/>
+        <NamedIndividual IRI="#knife"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Backpack"/>
+        <NamedIndividual IRI="#large-backpack"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Body"/>
+        <NamedIndividual IRI="#long-height-body"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Body"/>
+        <NamedIndividual IRI="#medium-height-body"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hood"/>
+        <NamedIndividual IRI="#normal-hood"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Gun"/>
+        <NamedIndividual IRI="#pistol"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Body"/>
+        <NamedIndividual IRI="#short-height-body"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Gun"/>
+        <NamedIndividual IRI="#shotgun"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Backpack"/>
+        <NamedIndividual IRI="#small-backpack"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Skin"/>
+        <NamedIndividual IRI="#white_skin"/>
+    </ClassAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://dbpedia.org/ontology/nationality"/>
+        <ObjectProperty IRI="http://dbpedia.org/ontology/hasLocation"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://dbpedia.org/ontology/nationality"/>
+        <Class IRI="http://dbpedia.org/ontology/Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#carries"/>
+        <Class IRI="#Offender"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasBody"/>
+        <Class IRI="#Offender"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSkin"/>
+        <Class IRI="#Offender"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#wears"/>
+        <Class IRI="#Offender"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://dbpedia.org/ontology/nationality"/>
+        <Class IRI="http://dbpedia.org/ontology/Country"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#carries"/>
+        <Class IRI="#Carried_accessory"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasBody"/>
+        <Class IRI="#Body"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSkin"/>
+        <Class IRI="#Skin"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#wears"/>
+        <Class IRI="#Hood"/>
+    </ObjectPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
