@@ -7,8 +7,8 @@ Name: Surveillance ontology,
 
 License: CC0 1.0 Universal,
 
-URI: http://i-lab.aegean.gr/kotis/Ontologies/Surveillance/surveillanceOnto,
+URI: http://i-lab.aegean.gr/kotis/Ontologies/Surveillance/surveillanceOnto
 
-Repository: https://github.com/KotisK/Surveillance,
+Repository: https://github.com/KotisK/Surveillance
 
 URL: https://i-lab.aegean.gr/kotis/Ontologies/Surveillance/surveillanceOnto-v2.owl
