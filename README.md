@@ -5,6 +5,6 @@ Version 0.2 is a working ontology since 15-09-2021 (Work in progress). The ontol
 
 Name: Surveillance ontology
 License: CC0 1.0 Universal
-URI: http://i-lab.aegean.gr/ontologies/surveillance
+URI: http://i-lab.aegean.gr/kotis/Ontologies/Surveillance/surveillanceOnto
 Repository: https://github.com/KotisK/Surveillance
-URL: https://i-lab.aegean.gr/kotis/Ontologies/surveillance/surveillanceOnto.owl
+URL: https://i-lab.aegean.gr/kotis/Ontologies/Surveillance/surveillanceOnto-v2.owl
